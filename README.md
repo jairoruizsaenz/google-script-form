@@ -9,4 +9,4 @@ Se entiende como víctima a las personas afectadas en los hechos violentos, ya s
 
 Te invito a interactuar con la visualización, Visita el Demo [aquí](https://jairoruizsaenz.github.io/Relaciones-Peliculas/).
 
-[!["gif de la aplicación real"](resources/img/Animacion.gif)](https://jairoruizsaenz.github.io/MassShooting-US/)
+[!["gif de la aplicación real"](form.png)]
