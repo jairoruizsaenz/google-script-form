@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+    <html>
+    
+    <head>
+        <base target="_blank">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Convocatoria FPS</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- https://materializecss.com/ -->
+        <!-- https://script.google.com/macros/s/AKfycbx7iiSxbO-4L0HglrQEXUdPg2gUMayM5uEDDNfrs7AOHuRjWQ4/exec -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <style>
+            .test{color:#fabd0f}
+            .disclaimer{width: 480px; color:#646464;margin:20px auto;padding:0 16px;text-align:center;font:400 12px Roboto,Helvetica,Arial,sans-serif}
+            .disclaimer a{color:#eda310}
+            .teal-text{color:#2fa1b4 !important}
+            #credit{display:none}
+            .btn{background-color: #eda310;}
+            .btn:hover{background-color:#ffaf11;}
+            .btn-large {background-color: #eda310;}
+            .btn2 {background-color: #2fa1b4;}
+            .btn2:hover{background-color:#38c1d8;}
+            .row{margin-bottom: 15px;}
+            .div_2{margin-bottom: 0px;margin-top: 0px;}
+            .nav-wrapper{background-color: #fabd0f;}
+            .page-footer{background-color: #fabd0f;}
+        </style>
+    </head>
+    <nav>
+        <div class="nav-wrapper">
+        </div>
+    </nav>
+    <body>
+        <form class="main" id="form" novalidate="novalidate" style="max-width: 880px;margin: 40px auto;">
+            
+            <div id="forminner">
+                <div class="row">
+                    <div class="col s12">
+                        <p style="text-align:center;">
+                            <img src="https://raw.githubusercontent.com/jairoruizsaenz/FPS_ResultadosEncuestas/master/resources/img/top_portada1%20-%20480.jpg" width="480px">
+                        </p>
+
+                        <h4 class="center-align test">Convocatoria para Estudiantes</h4>                        
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="input-field col s6">
+                        <h5 class="center-align teal-text">Programa de Excelencia del FPS-FNC</h5>
+                        <h5 class="center-align teal-text">Los mejores por Colombia</h5>
+                        <br>
+
+                        <p style="text-align:justify;">“Los Mejores por Colombia”, es una Política de excelencia adoptada Mediante Resolución 2281 de 2018, la cual tiene como objetivos convocar y seleccionar estudiantes que estén interesados en realizar la judicatura en el Fondo de Pasivo Social de Ferrocarriles Nacionales de Colombia mediante la celebración de un contrato de prestación de servicios para la ejecución de labores como asesores jurídicos en diferentes áreas de la Entidad, esto garantizando que los vinculados al programa sean estudiantes ubicados entre los diez (10) mejores promedios acumulados de su cohorte en la respectiva Universidad, calidad que deberá ser certificada por la Institución de Educación Superior.</p> 
+                        <p style="text-align:justify;">Con la mencionada política se pretende incentivar la competitividad en los servicios prestados al sector público, así como ejecutar acciones en contra de las barreras de acceso al primer empleo.</p>
+                        
+                    </div>
+    
+                    <div class="input-field col s6">
+
+                        <!-- Textbox: Nombre -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="name">Nombre completo</label>
+                                <input id="name" type="text" name="Name" class="validate" required="true" aria-required="true" value="">
+                            </div>
+                        </div>
+
+                        <!-- Textbox: Número de Cédula -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="id_number">Número de cédula</label>
+                                <input id="id_number" type="number" name="Id_number" class="validate" required="true" aria-required="true" value="">
+                            </div>                    
+                        </div>
+                                        
+                        <!-- Institución Educativa -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="name">Institución Educativa</label>
+                                <input id="universidad" type="text" name="Universidad" class="validate" required="true" aria-required="true" value="">
+                            </div>
+                        </div>
+
+                        <!-- Textbox: Email -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="email">Correo electrónico</label>
+                                <input id="email" type="email" name="Email" class="validate" required="true" aria-required="true" value="">
+                            </div>
+                        </div>
+                        
+                        <!-- FileField: Hoja de vida -->
+                        <div class="row">
+                            <div class="file-field input-field col s12">
+                                <div class="btn">
+                                    <span>Hoja de vida</span>
+                                    <input id="file_01" type="file">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" pattern=".+\.pdf$" placeholder="Selecciona un archivo pdf">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FileField: Certificado -->
+                        <div class="row">
+                            <div class="file-field input-field col s12">
+                                <div class="btn">
+                                    <span>Certificado</span>
+                                    <input id="file_02" type="file">
+                                </div>
+                                    <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" pattern=".+\.pdf$" placeholder="Selecciona un archivo pdf">
+                                </div>
+                            </div>
+                        </div>
+                                                
+                        <!-- Botón: Enviar -->
+                        <div class="row">                           
+                            <div class="input-field col s12">
+
+                                <div class="input-field col s12 div_2" id = "progress"></div>
+                                <div class="input-field col s12 div_2" id = "progress2" style="margin-bottom: 15px"></div>
+                                
+                                <p><label for="checkbox_id">
+                                    <input id="checkbox_id" type="checkbox" /><span style="text-align:justify;">Acepto y autorizo de manera expresa el uso de la información diligenciada de acuerdo a lo establecido en la política de uso de datos personales</span>
+                                </label></p>
+                                <p>
+                                    <a href="no-javascript.html" title="" id="leer_politica_datos">&nbsp &nbsp &nbsp &nbsp Leer política de uso de datos personales y autorización</a>
+                                </p>
+                                <br>
+                                <button class="waves-effect waves-light btn btn2 submit-btn" type="submit" onclick="custom_submit(); return false;">Enviar</button>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                                
+                <div class="row">                     
+                    <p style="text-align:center;">Si presenta inconvenientes en la aplicación puede comunicarse a:
+                    <span style="color:#039be5;">notificaciones.ti.fps@gmail.com</span></p>                     
+                </div>
+            </div>
+
+            <div id="success" style="display:none">
+                <div class="row">
+                    <div class="col s12">
+                        <p style="text-align:center;">
+                            <img src="https://raw.githubusercontent.com/jairoruizsaenz/FPS_ResultadosEncuestas/master/resources/img/top_portada1%20-%20480.jpg" width="480px">
+                        </p>
+                        <h4 class="center-align test">Convocatoria para Estudiantes</h4>
+                    </div>
+                </div>              
+                <h5 class="left-align teal-text">Registro Exitoso</h5>
+                <p>Hemos recibido su aplicación, muchas gracias por enviar su información</p>
+                <p>Ya puede cerrar esta página</p>
+            </div>
+
+            <div id="politica_datos" style="display:none;text-align:justify;">
+                <div class="row">
+                    <div class="col s12">
+                        <p style="text-align:center;">
+                            <img src="https://raw.githubusercontent.com/jairoruizsaenz/FPS_ResultadosEncuestas/master/resources/img/top_portada1%20-%20480.jpg" width="480px">
+                        </p>                        
+                    </div>
+                </div>              
+                <h5 class="left-align teal-text" style="text-align:center;"><strong>AUTORIZACIÓN PARA EL TRATAMIENTO Y USO DE DATOS PERSONALES DE HOJAS DE VIDA POSTULANTES</strong></h5>
+                <br>
+                <p>El <strong>Fondo de Pasivo Social Ferrocarriles Nacionales de Colombia</strong>, en cumplimiento de la Ley 1581 de 2012, sus decretos reglamentarios y el Manual adoptado por el Fondo y publicado en su página web, por los cuales se establecen disposiciones generales del hábeas data y se regula el manejo de la información contenida en bases de datos, es responsable del tratamiento de los datos personales que nos suministrará en el documento de hoja de vida que ha remitido al <strong>Fondo de Pasivo Social Ferrocarriles Nacionales de Colombia</strong>. En esa medida, dichos datos serán tratados únicamente por el Fondo con la finalidad de incluirlos en el banco de hojas de vida para efectuar el análisis del perfil y validar si el mismo se ajusta a los requisitos exigidos por el Fondo para el cargo requerido y/o surtir el proceso de selección al cual se ha postulado, con la finalidad de realizar el estudio técnico, psicotécnico, referenciación, de seguridad y médico. Lo anterior para efectos de dar cumplimiento a las disposiciones contenidas en la Ley 1581 de 2012.</p>
+
+                <p>Así bien, en atención a las estipulaciones antes dichas, usted declara de manera libre y voluntaria conocer los derechos que la normativa y la jurisprudencia conceden como titular de los datos personales y que se enuncian a continuación.</p>
+
+                <p>En ese sentido, como titular de los datos suministrados para la finalidad arriba señalada, tiene derecho a: (i) Conocer, actualizar y rectificar datos personales frente a los responsables o encargados del tratamiento. Este derecho se podrá ejercer, entre otros, frente a datos parciales, inexactos, incompletos, fraccionados, que induzcan a error, o aquellos cuyo tratamiento esté expresamente prohibido o no haya sido autorizado; (ii) solicitar prueba de la autorización otorgada al responsable del tratamiento salvo cuando expresamente se exceptúe como requisito para el tratamiento; (iii) ser informado por el responsable del tratamiento o el encargado del tratamiento, previa solicitud, respecto del uso que se le haya dado a mis datos personales ; (iv) presentar ante la Superintendencia de Industria y Comercio, quejas por infracciones al régimen de protección de datos personales; (v) revocar la autorización y/o solicitar la supresión del dato personal cuando en el tratamiento no se respeten los principios, derechos y garantías constitucionales y legales. (vi) acceder en forma gratuita a mis datos personales, que hayan sido objeto de Tratamiento.</p>
+
+                <p>Finalmente, en los casos en que se requiere ejercer los derechos anteriormente mencionados, podrá enviar su solicitud al correo electrónico <span style="color:#039be5;">quejasyreclamos@fps.gov.co</span>  o a través de atención personalizada en la Calle 13 N° 18 – 24, de lunes a viernes en horario de 7:30 a.m a 4:00 p.m, Bogotá D.C.</p>
+
+                <p>La política de tratamiento de datos personales y el aviso de privacidad los puede consultar en la página web de la entidad.</p>
+
+                <strong><p>Autorización:</p></strong>
+                <p>Autorizo de manera expresa al <strong>Fondo de Pasivo Social Ferrocarriles Nacionales de Colombia</strong> para tratar y hacer uso de la información contenida en mi documento de hoja de vida con la finalidad de realizar el análisis de mi perfil, así como también para que dicho documento sea incluido en la base de hojas de vida del <strong>Fondo de Pasivo Social Ferrocarriles Nacionales de Colombia</strong>,  o bien sea vinculado a otros procesos de selección que el <strong>Fondo de Pasivo Social Ferrocarriles Nacionales de Colombia</strong> adelante con posterioridad, y/o compartido con proveedores que intervengan en el proceso de selección de <strong>Fondo de Pasivo Social Ferrocarriles Nacionales de Colombia</strong> para realizar el estudio técnico, psicotécnico, referenciación, de seguridad y médico, en el que en estos últimos los datos suministrados son de naturaleza sensible y por ende requiere mi autorización expresa como titular de los mismos para su tratamiento.</p>
+                
+                <br>
+                <div style="text-align:center;">
+                    <button class="waves-effect waves-light btn btn2 submit-btn" type="submit" onclick="regresar(); return false;">Regresar</button>
+                </div>
+            </div>
+
+        </form>
+
+        <!--
+        ----------------------------------------------------------------------------------------------------------------------------------
+        -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+        <script src="https://gumroad.com/js/gumroad.js"></script>
+
+        <script>
+            
+            var my_temp_01
+            
+            var file_01;
+            var reader_01 = new FileReader();
+
+            reader_01.onloadend = function(e) {
+                
+                if (e.target.error != null) {
+                    showError("File " + file_01.name + " could not be read.");
+                    return;
+                } else {                    
+                    google.script.run
+                    .withSuccessHandler(showSuccess)
+                    .uploadFileToGoogleDrive(e.target.result, file_01.name, $('input#name').val(), $('input#id_number').val(), $('input#universidad').val(), $('input#email').val(), "1", my_temp_01);                    
+                }
+            };
+            //---------------------------------------------------------
+
+            var file_02;
+            var reader_02 = new FileReader();
+
+            reader_02.onloadend = function(e) {
+
+                if (e.target.error != null) {
+                    showError("File " + file_02.name + " could not be read.");
+                    return;
+                } else {                    
+                    google.script.
+                    run.withSuccessHandler(showSuccess)
+                    .uploadFileToGoogleDrive(e.target.result, file_02.name, $('input#name').val(), $('input#id_number').val(), $('input#universidad').val(), $('input#email').val(), "2", my_temp_01);
+                }
+            };
+            //---------------------------------------------------------
+
+            function showSuccess(e) {
+                if (e === "OK") {                    
+                    $('#forminner').hide();
+                    $('#success').show();
+                } else {
+                                    
+                    my_temp_01 = e
+                    my_temp_01 = my_temp_01.toString()
+                    console.log(e);
+                    //showError(e);
+                }
+            }
+            
+            //---------------------------------------------------------
+            
+            var leer = document.getElementById('leer_politica_datos');
+            leer.onclick = showPolitica;
+
+            function showPolitica() {                
+                $('#forminner').hide();
+                $('#politica_datos').show();
+                
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+
+                return false;
+                }
+
+            function regresar() {                
+                $('#politica_datos').hide();
+                $('#forminner').show();
+                return false;
+                }
+
+            //---------------------------------------------------------
+
+            function submitForm_00() {
+                
+                showMessage2("Validando datos ...");
+                //---------------------------------------------------------
+                //-- Validación campo NOMBRE COMPLETO
+                var name = $('input#name').val();
+                if (name === "") {
+                    showError("Debe diligenciar el campo NOMBRE COMPLETO");
+                    return;
+                }
+                
+                //---------------------------------------------------------
+                //-- Validación campo NUMERO DE CEDULA
+                var name = $('input#id_number').val();
+                if (name === "") {
+                    showError("Debe diligenciar el campo NÚMERO DE CEDULA");
+                    return;
+                }
+
+                //---------------------------------------------------------
+                //-- Validación campo UNIVERSIDAD
+                var name = $('input#universidad').val();
+                if (name === "") {
+                    showError("Debe diligenciar el campo INSTITUCIÓN EDUCATIVA");
+                    return;
+                }
+                
+                //---------------------------------------------------------
+                //-- Validación campo EMAIL
+                var name = $('input#email').val();
+                if (name === "") {
+                    showError("Debe diligenciar el campo CORREO ELECTRÓNICO");
+                    return;
+                }
+
+                //---------------------------------------------------------
+                //-- Validación campo file_01 - HOJA DE VIDA
+                var files_01 = $('#file_01')[0].files;
+                if (files_01.length === 0) {
+                    showError("Seleccione un archivo para subir en el campo HOJA DE VIDA");
+                    return;
+                }
+
+                file_01 = files_01[0];
+                if (file_01.size > 1024 * 1024 * 5) {
+                    showError("El tamaño del archivo HOJA DE VIDA debe ser menor a 5 MB.");
+                    return;
+                }
+                
+                temp = file_01.name
+                temp = temp.toString().toUpperCase()
+                temp = temp.endsWith(".PDF");
+
+                if (temp == false) {
+                    showError("El archivo HOJA DE VIDA debe ser formato PDF");
+                    return;
+                }           
+                                
+                //---------------------------------------------------------
+                //-- Validación campo file_02 - CERTIFICADO
+                var files_02 = $('#file_02')[0].files;
+                if (files_02.length === 0) {
+                    showError("Seleccione un archivo para subir en el campo CERTIFICADO");
+                    return;
+                }
+
+                file_02 = files_02[0];
+                if (file_02.size > 1024 * 1024 * 5) {
+                    showError("El tamaño del archivo CERTIFICADO debe ser menor a 5 MB.");
+                    return;
+                }
+
+                temp = file_02.name
+                temp = temp.toString().toUpperCase()
+                temp = temp.endsWith(".PDF");
+                
+                if (temp == false) {
+                    showError("El archivo CERTIFICADO debe ser formato PDF");
+                    return;
+                }
+                
+                //---------------------------------------------------------
+                //-- Validación uso de datos
+                var my_checkbox = $('input#checkbox_id').prop('checked');                
+                if (my_checkbox == false) {
+                    showError("Debe aceptar lo establecido en la política de uso de datos personales");
+                    return;
+                }
+                
+                showMessage2("Guardando archivos ...");
+                setTimeout(submitForm_01, 2000);
+            }   
+                        
+            function submitForm_01() {
+                
+                showMessage2("Seguimos trabajando...");
+                //---------------------------------------------------------
+                reader_01.readAsDataURL(file_01);
+                setTimeout(timed_submitForm_02, 4000);             
+                //---------------------------------------------------------
+            }
+            
+            function submitForm_02() {
+                showMessage2("Espere un mensaje de confirmación...");
+                //---------------------------------------------------------                
+                reader_02.readAsDataURL(file_02);
+                //---------------------------------------------------------
+            }
+
+            function showError(e) {
+                $('#progress').addClass('red-text').html(e);
+                $('#progress2').removeClass('red-text').html('');
+                console.log("Error " + e);
+            }
+
+            function showMessage(e) {                
+                $('#progress').removeClass('red-text').html(e);
+                console.log("Message_01: " + e);                
+            }
+
+            function showMessage2(e) {
+                $('#progress2').removeClass('red-text').html(e);
+                console.log("Message_02: " + e);                
+            }
+            
+            function timed_submitForm_02() {
+                if ( my_temp_01 == null) {                    
+                    setTimeout(timed_submitForm_02, 1000);
+                }
+                else {
+                    console.log('-----------------------------');
+                    console.log('Uploading.. File_02');
+                    
+                    setTimeout(submitForm_02, 200);
+                }
+            }
+
+            function custom_submit() {
+                
+                showError('');
+                showMessage('');
+                showMessage2('');
+
+                console.clear();
+                console.log('-----------------------------');
+                console.log("%cFormulario", "color: blue; text-transform: uppercase");
+                console.log('-----------------------------');
+                var folderName = "Entregas Convocatoria";
+
+                showMessage2("Tramitando solicitud ...");
+                google.script.run.createFolder_01(folderName, $('input#name').val(), $('input#id_number').val());
+                
+                setTimeout(submitForm_00, 0);
+            }
+
+        </script>
+    </body>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row white-text">                
+                <h6>FONDO DE PASIVO SOCIAL FERROCARILES NACIONALES DE COLOMBIA</h6>
+                <p class="text-lighten-12 div_2">Bogota D.C., Colombia</p>
+                <p class="text-lighten-12 div_2">Dirección: Calle 13 No. 18-24 Estación de la Sabana (Bogota-Colombia)</p>
+                <p class="text-lighten-12 div_2">E-mail: quejasyreclamos@fps.gov.co - comunicaciones@fps.gov.co</p>
+                <p class="text-lighten-12 div_2">PBX: (57) (1)3817171 - Ext. 100, 173, 181 y 180 - 2476775</p>
+                <p class="text-lighten-12 div_2">Linea Gratuita: 01-8000-09-12206</p>
+                <p class="text-lighten-12 div_2">Horarios de Atención: Lunes a Viernes 7:30 a.m - 4:00 p.m Jornada Continua</p>
+                <p></p>
+            </div>
+        </div>
+    </footer>
+</html>
