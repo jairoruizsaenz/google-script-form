@@ -21,5 +21,10 @@ Functionalities:
 
 The current form has 4 textbox input fields, 2 File input fields and a checkbox
 + The file input validates that each file is a PDF file an maximum size of 5 MB
++ The information in the textboxes will be saved in a spreadsheet file in google drive
++ The files will be saved in google drive
++ A confirmation email will be sent with the files attached
+
+***
 
 !["Form Image"](form.png)
