@@ -1,13 +1,12 @@
 # Google script form
 A google form script which allows to upload files without signing in, saves the files in google drive and sends email confirmation using gmail.
 
-# Víctimas de Mass Shootings - Estados Unidos
-## En lo recorrido del año 2017 van 2,367 Victimas
+Coded by Jairo Ruiz Saenz - October 2018
 
-Usando la base de datos de [Mass Shooting Tracker](https://www.massshootingtracker.org/data), en la que registran los eventos de masacres reportadas en Estados Unidos en el periodo de 2013 - 2017, se crea un TreeMap en el que podrás visualizar las cantidades de victimas y proporciones de los eventos registrados por año, estado y ciudad.
-Se entiende como víctima a las personas afectadas en los hechos violentos, ya sea que la persona haya sido herida o haya fallecido en el incidente.
+Based on:
 
-Te invito a interactuar con la visualización, Visita el Demo [aquí](https://jairoruizsaenz.github.io/Relaciones-Peliculas/).
-
+[Link 1](https://www.labnol.org/internet/receive-files-in-google-drive/19697/)
+[Link 2](https://medium.com/@dmccoy/how-to-submit-an-html-form-to-google-sheets-without-google-forms-b833952cc175)
+[Link 3](https://ctrlq.org/code/19117-save-gmail-as-pdf?_ga=2.160396157.1718000879.1540091702-379554840.1539588470)
 
 !["Form Image"](form.png)
