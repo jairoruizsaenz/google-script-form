@@ -1,4 +1,4 @@
-# Google script form
+﻿# Google script form
 A google form script which allows to upload files without signing in, saves the files in google drive and sends email confirmation using gmail.
 
 Coded by Jairo Ruiz Saenz - October 2018
@@ -17,7 +17,7 @@ Based on:
 
 Functionalities:
 
-The current form has 4 textbox input fields, 2 File input fields and a checkbox
+The current form has 6 textbox input fields, 2 File input fields and a checkbox
 + The file input validates that each file is a PDF file an maximum size of 5 MB
 + The information in the textboxes will be saved in a spreadsheet file in google drive
 + The files will be saved in google drive
